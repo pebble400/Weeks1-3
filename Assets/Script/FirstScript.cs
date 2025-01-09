@@ -17,6 +17,15 @@ public class FirstScript : MonoBehaviour
     {
         Vector2 pos = transform.position;
         pos.x += speed;
+
+        Vector2 squreInScreenSpace = Camera.main.WorldToScreenPoint(pos);
+
+
+        if(squreInScreenSpace.x < -10 || squreInScreenSpace.x > Screen.width)
+        {
+            speed = speed *= -1;
+
+        }
         transform.position = pos;
     }
 }
