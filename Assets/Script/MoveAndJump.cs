@@ -39,6 +39,7 @@ public class MoveAndJump : MonoBehaviour
                 t = 0;
                 isJumping = false;
                 rot.z = 0;
+
             }
 
         }
